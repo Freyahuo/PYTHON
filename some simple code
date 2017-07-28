@@ -53,3 +53,38 @@ if post != -1:
  
  file.write(content)
 file.close()
+
+--4.读取文件名字
+
+import os
+
+def rename_files()
+    
+    file_name = os.listdir("C:/Users/vcyber/Desktop/prank")  
+    
+    # os.listdir("C:\Users\vcyber\Desktop\prank")注意r对于\转义符的作用，以及可以用/代替
+    
+    print file_name
+    
+rename_files()
+
+
+--5.去掉文件名中的数字
+import os
+
+def rename_files():
+    # get file names from a  folder
+    
+    file_list = os.listdir("C:/Users/vcyber/Desktop/prank")
+    print file_list
+    saved_path = os.getcwd()
+    print("Current working directory is "+saved_path)
+    os.chdir("C:/Users/vcyber/Desktop/prank")
+    #for each file,rename filename
+    for file_name in file_list:
+       print("old name -"+file_name)
+       print("new name -"+file_name.translate(None,"0123456789"))
+       os.rename(file_name,file_name.translate(None,"0123456789"))
+    os.chdir("C:/Users/vcyber/Desktop")   
+rename_files()
+
