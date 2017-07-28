@@ -1,6 +1,6 @@
 
 
-1.隔一段时间打开一次浏览器
+--1.隔一段时间打开一次浏览器
 
 import webbrowser
 
@@ -19,7 +19,8 @@ webbrowser.open("stackoverflow.com")
 bc+=1
 
 print bc
-2.按行读取文件
+
+--2.按行读取文件
 
 file = open("d:/diaoyan.txt","r")
 
@@ -36,7 +37,7 @@ print line
 
 file.close()
 
-3.给keyword前插入内容
+--3.给keyword前插入内容
 
 file = open(‘a’,'r')
 
