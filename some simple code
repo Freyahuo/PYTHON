@@ -114,3 +114,23 @@ def check_profanity(text_to_check)
         print("could not scan")
        
 read_text()
+
+
+
+---7 列转行
+
+f = open('C:/Users/vcyber/Desktop/dest.txt', 'r')   #以读方式打开文件  
+result = list()  
+for line in f.readlines():                          #依次读取每行  
+    line = line.strip()                             #去掉每行头尾空白  
+    if not len(line) or line.startswith('#'):       #判断是否是空行或注释行  
+        continue                                    #是的话，跳过不处理  
+    result.append(line)                             #保存  
+#print result
+       
+#print ','.join(result)
+rowfile=open('C:/Users/vcyber/Desktop/src.txt','w') 
+rowfile.write(','.join(result))
+  
+f.close()
+rowfile.close()
